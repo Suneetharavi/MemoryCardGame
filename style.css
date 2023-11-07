@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height: 100vh;
+    background: palevioletred;
+
+}
+
+.container{
+    height: 500 px;
+    width: 500px;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+
