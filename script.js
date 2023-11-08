@@ -34,22 +34,33 @@ let winCount = 0;
 //Pick random Objects from the items array
 
 const generateRandom = (size = 4) => {
-
+  //Creating a temporary Array
     let tempArray = [...items];
-
+//Initializes card values array
     let cardValues = [];
-
+//size should be double (4*4 matrix) /2 since pais of objects would exist.
     size = (size*size) / 2;
-
+//Random Object Selecton 
     for(let i=0; i<=size; i++){
         const randomIndex = Math.floor(MAth.random() * tempArray.length);
 
         cardValues.push(tempArray[randomIndex]);
-
+//Once selected remove the object from temp Array
         tempArray.splice(randomIndex, 1);
     }
  return cardValues;
 }
+
+const matrixGenerator = (cardValues, size = 4) => {
+    gameContainer.innerHTML = '';
+    cardValues = [...cardValues, ...cardValues]
+    //shuffle
+    cardValues.sort(() => Math.random() - 0.5);
+    for(let i=0; i< size * size; i++){}
+
+}
+
+
 
 
 
