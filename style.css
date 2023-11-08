@@ -7,10 +7,35 @@ body{
 
 }
 
+img{
+    width:100px;
+    height:100px;
+}
+
 .container{
     height: 500 px;
     width: 500px;
     background: whitesmoke;
     border-radius: 10px;
+}
+
+.cards, .card, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cards{
+    height:100%;
+    width:100%;
+    flex-wrap: wrap;
+    cursor:pointer;
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+}
+
+.cards .card{
+
 }
 
