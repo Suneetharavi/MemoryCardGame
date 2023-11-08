@@ -56,8 +56,20 @@ const matrixGenerator = (cardValues, size = 4) => {
     cardValues = [...cardValues, ...cardValues]
     //shuffle
     cardValues.sort(() => Math.random() - 0.5);
-    for(let i=0; i< size * size; i++){}
-}
+    for(let i=0; i< size * size; i++){
+            //Create cards before => Front side (contains question mark)
+            //after => back side (contains actual image)
+            //data-card-values stores the names of the cards to match later
+        gameContainer.innerHTML += `
+        <div class = "card-container" data-card-value="${cardValues[i].name}">
+            <div class = "card-before">?</div>
+            <div class = "card-after"><img src="${cardValues[i].image}" class="image" />
+        </div>
+        `;
+
+    }
+    gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
+};
 
 //Initialize values and func calls
 
