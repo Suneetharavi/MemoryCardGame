@@ -3,8 +3,7 @@ body{
     align-items:center;
     justify-content: center;
     min-height: 100vh;
-    background: palevioletred;
-
+    background: rgb(49, 52, 1);
 }
 
 img{
@@ -12,19 +11,39 @@ img{
     height:100px;
 }
 
-.container{
+.wrapper{
+    box-sizing:border-box;
     height: 500 px;
-    width: 500px;
+    width: 26.87em;
     background: whitesmoke;
     border-radius: 10px;
+    padding: 2.5em 3em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
 }
 
-.cards, .card, .view{
+.game-container{
+
+    width:100%;
+    display: grid;
+    position: relative;
+}
+
+.card-container{
+    position:relative;
+    width: 6.25 em;
+    
+}
+
+/* .cards, .card, .view{
     display: flex;
     align-items: center;
     justify-content: center;
 
-}
+} */
 
 .cards{
     height:100%;

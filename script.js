@@ -22,7 +22,10 @@ const images = [
     {name : 'sun' , image: "sun.jpg"},
     {name : 'dog' , image: "dog.jpg"},
     {name : 'christmas' , image: "chrismas.jpg"},
-    {name : 'perscholas' , image: "perscholas"}
+    {name : 'perscholas' , image: "perscholas.jpg"}
+    {name : 'rainbow' , image: "rainbow.jpg"}
+    {name : 'nature' , image: "rainbows.jpg"}
+    {name : 'peacock' , image: "peacock.jpg"}
 ]
 
 let winCount = 0;
@@ -47,6 +50,8 @@ const generateRandom = (size = 4) => {
     }
  return cardValues;
 }
+
+
 
 
 
