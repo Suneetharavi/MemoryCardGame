@@ -10,7 +10,9 @@ const controls = document.querySelector(".controls-container");
 const displayScore1 = document.querySelector('#score1');
 const displayScore2 = document.querySelector('#score2');
 
-
+let score1 = 0;
+let score2 = 0;
+let p1Turn = true;
 let cards;
 let interval;
 let firstCard = false;
