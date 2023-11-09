@@ -23,10 +23,14 @@ create div (container) to hold the cards
 create lists for displaying images in box and display using flex
 create 2 views front view and back view
 compare the images clicked
-if clicked 2 images are same . block that 2 display images
-if all the images are blocked within the given time limit (40 sec)..you win the Game.
+if clicked 2 images are same . block that 2 display images.
+if all the images are blocked within the given time limit (120 sec)..you win the Game.
 else
 you loose the game
+
+Its a 2 Player Game 
+Each player take turns 
+
 Get a confirmation box to restart the game 
 if yes set the game from first
 else 
