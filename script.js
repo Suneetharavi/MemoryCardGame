@@ -7,6 +7,9 @@ const stopButton = document.getElementById("stop");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
 
+const displayScore1 = document.querySelector('#score1');
+const displayScore2 = document.querySelector('#score2');
+
 
 let cards;
 let interval;

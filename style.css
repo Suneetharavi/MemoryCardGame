@@ -43,7 +43,7 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;  /* To make it in middle */
-    top: 50%;
+    top: 60%;
     border-radius: 0.6em;
     box-shadow: 0 0.9em 2.8em rgba(198, 242, 4, 0.2);
   }
@@ -126,3 +126,56 @@ body {
   .hide {
     display: none;
   }
+
+  .Memory{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 535px;
+    top: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.0882153px;
+    color: #ef1414;
+}
+
+.restartbutton{
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    border: #f4a236;
+    color: #ffffff;
+    position: absolute;
+    width: 160px;
+    height: 52px;
+    left: 528px;
+    top: 5px;
+    line-height: 20px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    background: #F4A236;
+    border-radius: 8px;
+}
+
+.exitbutton{
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    border: #D4190C;
+    color: #ffffff;
+    position: absolute;
+    width: 120px;
+    height: 52px;
+    left: 698px;
+    top: 5px;
+    line-height: 20px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    background: #D4190C;
+    border-radius: 8px;
+}
