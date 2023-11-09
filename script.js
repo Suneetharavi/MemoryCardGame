@@ -76,10 +76,13 @@ const generateRandom = (size = 4) => {
 };
 
 const matrixGenerator = (cardValues, size = 4) => {
+    //clearing the innerHTML to display fresh
   gameContainer.innerHTML = "";
+  //creating same images of cardValues images(creating 2 images of same type)
   cardValues = [...cardValues, ...cardValues];
   //simple shuffle
   cardValues.sort(() => Math.random() - 0.5);
+  //Displaying all 16 images (8 +8)
   for (let i = 0; i < size * size; i++) {
     /*
         Create Cards
