@@ -1,10 +1,10 @@
-const gameContainer = document.getElementById('.game-container')
+const gameContainer = document.querySelector('.game-container')
 const moves = document.getElementById('moves-count');
 const timeValue = document.getElementById('time')
 const startButton = document.getElementById('start')
 const stopButton = document.getElementById('stop')
 const result = document.getElementById('result')
-const controls = document.querySelector(controls-container);
+const controls = document.querySelector(".controls-container");
 
 let cards;
 let interval;
@@ -28,12 +28,12 @@ const images = [
 ]
 //Initial Time
 let seconds = 0;
-minutes = 0;
+let minutes = 0;
 //Initial Count
 let winCount = 0;
-    movesCount = 0;
+let movesCount = 0;
 
-    //For Timer 
+//For Timer 
 const timeGenerator = () =>{
     seconds += 1;
     //For minutes logic
@@ -49,6 +49,12 @@ const timeGenerator = () =>{
     timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
 
+//For calculating moves
+
+const movesCounter = () => {
+    movesCount += 1;
+    moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+}
 //Pick random Objects from the items array
 
 const generateRandom = (size = 4) => {
@@ -59,7 +65,7 @@ const generateRandom = (size = 4) => {
 //size should be double (4*4 matrix) /2 since pais of objects would exist.
     size = (size*size) / 2;
 //Random Object Selecton 
-    for(let i=0; i<=size; i++){
+    for(let i=0; i<size; i++){
         const randomIndex = Math.floor(Math.random() * tempArray.length);
 
         cardValues.push(tempArray[randomIndex]);
@@ -98,6 +104,16 @@ const initializer = () =>{
     matrixGenerator(cardValues);
 };
 
+//Stop game
+stopButton.addEventListener(
+    "click",
+    (stopGame = () => {
+      controls.classList.remove("hide");
+      stopButton.classList.add("hide");
+      startButton.classList.remove("hide");
+      clearInterval(interval);
+    })
+  );
 initializer();
 
 
