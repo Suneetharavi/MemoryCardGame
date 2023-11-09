@@ -33,7 +33,7 @@ const images = [
     {name : 'nature' , image: "rainbows.jpg"},
     {name : 'peacock' , image: "peacock.jpg"}
 ];
-console.log(images);
+//console.log(images);
 let seconds = 0,
   minutes = 0;
 //Initial moves and win count
@@ -52,6 +52,14 @@ const timeGenerator = () => {
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
   //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+  if((secondsValue) === 30){
+    alert('Time is Up');
+    // setTimeout(stopGame,1000);
+    checkGameOver(); // game is over if either player gets 28 points
+
+    stopGame();
+  }
+  
 };
 
 //For calculating moves
