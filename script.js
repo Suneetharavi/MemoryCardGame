@@ -6,6 +6,7 @@ const startButton = document.getElementById("start");
 const stopButton = document.getElementById("stop");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
+const playing = document.getElementById("overlay")
 
 const displayScore1 = document.querySelector('#score1');
 const displayScore2 = document.querySelector('#score2');
@@ -52,7 +53,7 @@ const timeGenerator = () => {
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
   //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
-  if((secondsValue) === 30){
+  if((minutesValue) === 2){
     alert('Time is Up');
     // setTimeout(stopGame,1000);
     checkGameOver(); // game is over if either player gets 28 points
@@ -221,12 +222,12 @@ const initializer = () => {
 
 function checkGameOver(){ // game is over if either player gets 28 points
     if (score1 > score2){
-       alert("CONGRATULATIONS PLAYER ONE! YOU WON!");
+       alert("CONGRATULATIONS PLAYER ONE!");
     //    stopGame();
        location.reload();
     }
     else if (score2 > score1){
-       alert("CONGRATULATIONS PLAYER TWO! YOU WON!");
+       alert("CONGRATULATIONS PLAYER TWO!");
     //    stopGame();
        location.reload();
     }
@@ -235,6 +236,13 @@ function checkGameOver(){ // game is over if either player gets 28 points
     location.reload();
  }
 
+//  function on(player1) {
+//     document.getElementById("overlay").style.display = "block";
+//   }
+  
+//   function off() {
+//     document.getElementById("overlay").style.display = "none";
+//   }
 
 
 
