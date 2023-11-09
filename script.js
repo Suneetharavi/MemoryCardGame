@@ -1,5 +1,6 @@
 const gameContainer = document.querySelector(".game-container");
 const moves = document.getElementById("moves-count");
+const player = document.getElementById("player");
 const timeValue = document.getElementById("time");
 const startButton = document.getElementById("start");
 const stopButton = document.getElementById("stop");

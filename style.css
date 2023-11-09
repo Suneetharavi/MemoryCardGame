@@ -11,6 +11,7 @@
   .wrapper {
     box-sizing: content-box;
     width: 26.87em;
+    /* height: 80%; */
     padding: 2.5em 3em;
     background-color: #f21515;
     position: absolute;
