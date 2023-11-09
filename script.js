@@ -98,10 +98,11 @@ const matrixGenerator = (cardValues, size = 4) => {
      </div>
      `;
   }
-//   //Grid
+//   //Grid, pack in as many columns (fit to size) into a grid row before it wraps to a new line
   gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
   //Cards
   cards = document.querySelectorAll(".card-container");
+  //Adding EventListeners to each click on the card.
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       //If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
@@ -155,7 +156,7 @@ startButton.addEventListener("click", () => {
   movesCount = 0;
   seconds = 0;
   minutes = 0;
-  //controls amd buttons visibility
+  //controls and buttons visibility (hide is the class name of stop button in wrapper)
   controls.classList.add("hide");
   stopButton.classList.remove("hide");
   startButton.classList.add("hide");
@@ -172,11 +173,12 @@ stopButton.addEventListener(
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
-    clearInterval(interval);
+    clearInterval(100);
   })
 );
 //Initialize values and func calls
 const initializer = () => {
+//Clearing the score for next game
   result.innerText = "";
   winCount = 0;
   let cardValues = generateRandom();
