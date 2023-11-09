@@ -121,6 +121,7 @@ const matrixGenerator = (cardValues, size = 4) => {
           //current cards value becomes firstCardValue
           firstCardValue = card.getAttribute("data-card-value");
         } else {
+            isBoardClosed = true;
           //increment moves since user selected second card
           movesCounter();
           //secondCard and value
@@ -135,12 +136,23 @@ const matrixGenerator = (cardValues, size = 4) => {
             //winCount increment as user found a correct match
             winCount += 1;
             //check if winCount ==half of cardValues
-            if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
-            <h4>Moves: ${movesCount}</h4>`;
-            // <h4>Time taken: ${minutesValue}:${secondsValue}</h4>`;
-              stopGame();
+            
+            if (p1Turn) {
+                score1 +=2;
+                displayScore1.textContent = score1.toString();
             }
+            else {
+                score2 +=2;
+                displayScore2.textContent = score2.toString();
+            }
+            //console.log(winCount);
+            if (winCount == Math.floor(cardValues.length / 2)) {
+                setTimeout( checkGameOver);
+            //   result.innerHTML = `<h2>You Won</h2>
+            // <h4>Moves: ${movesCount}</h4>`;
+                stopGame();
+           }
+           
           } else {
             //if the cards dont match
             //flip the cards back to normal
@@ -151,6 +163,13 @@ const matrixGenerator = (cardValues, size = 4) => {
               tempFirst.classList.remove("flipped");
               tempSecond.classList.remove("flipped");
             }, 900);
+
+            if (p1Turn){
+                p1Turn = false;
+            }
+            else if (!p1Turn){
+                p1Turn = true;
+            }
           }
         }
       }
@@ -172,7 +191,7 @@ startButton.addEventListener("click", () => {
   moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
   initializer();
 });
-//Stop game
+//Restart game
 stopButton.addEventListener(
   "click",
   (stopGame = () => {
@@ -191,6 +210,22 @@ const initializer = () => {
   console.log(cardValues);
   matrixGenerator(cardValues);
 };
+
+function checkGameOver(){ // game is over if either player gets 28 points
+    if (score1 > score2){
+       alert("CONGRATULATIONS PLAYER ONE! YOU WON!");
+    //    stopGame();
+       location.reload();
+    }
+    else if (score2 > score1){
+       alert("CONGRATULATIONS PLAYER TWO! YOU WON!");
+    //    stopGame();
+       location.reload();
+    }
+    else if(score1 === score2)
+    alert("Draw match")
+    location.reload();
+ }
 
 
 
