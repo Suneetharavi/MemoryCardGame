@@ -147,10 +147,10 @@ const matrixGenerator = (cardValues, size = 4) => {
             }
             //console.log(winCount);
             if (winCount == Math.floor(cardValues.length / 2)) {
-                setTimeout( checkGameOver);
+                setTimeout( checkGameOver,2000);
             //   result.innerHTML = `<h2>You Won</h2>
             // <h4>Moves: ${movesCount}</h4>`;
-                stopGame();
+               setTimeout(stopGame,2000);
            }
            
           } else {
