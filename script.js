@@ -1,11 +1,10 @@
+const gameContainer = document.getElementById('.game-container')
 const moves = document.getElementById('moves-count');
 const timeValue = document.getElementById('time')
 const startButton = document.getElementById('start')
 const stopButton = document.getElementById('stop')
-const gameContainer = document.getElementById('.game-container')
 const result = document.getElementById('result')
-// const controls = document.querySelector(controls-container);
-
+const controls = document.querySelector(controls-container);
 
 let cards;
 let interval;
@@ -27,9 +26,28 @@ const images = [
     {name : 'nature' , image: "rainbows.jpg"},
     {name : 'peacock' , image: "peacock.jpg"}
 ]
-
+//Initial Time
+let seconds = 0;
+minutes = 0;
+//Initial Count
 let winCount = 0;
     movesCount = 0;
+
+    //For Timer 
+const timeGenerator = () =>{
+    seconds += 1;
+    //For minutes logic
+    if(seconds >= 60){
+        minutes += 1;
+        seconds = 0;
+    }
+
+    //Format time before displaying
+
+    let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
+    let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+    timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+};
 
 //Pick random Objects from the items array
 
@@ -66,7 +84,6 @@ const matrixGenerator = (cardValues, size = 4) => {
             <div class = "card-after"><img src="${cardValues[i].image}" class="image" />
         </div>
         `;
-
     }
     gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
 };
