@@ -28,8 +28,25 @@ if all the images are blocked within the given time limit (120 sec)..you win the
 else
 you loose the game
 
-Its a 2 Player Game 
+Its a 2 Player Game (Player1 and Player2)
 Each player take turns 
+
+For every match the player make ,score increases by 1.
+The player whose score is high will win the game.
+
+The players has to finish the game within 2 minutes. 
+If the game is not finished within 2 minutes. 
+you will get an alert box . saying "Time Up"
+
+If players finish the game in 2 minutes..
+
+The player whose score is high will be the winner.
+
+Exit button - To exit the game completely.
+
+restart button - To restart the game 
+
+Players1 and player2 scores will be displayed on either end of the left and right screen
 
 Get a confirmation box to restart the game 
 if yes set the game from first
