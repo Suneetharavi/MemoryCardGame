@@ -45,13 +45,16 @@ const timeGenerator = () => {
   //format time before displaying
   let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+  //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
+
 //For calculating moves
 const movesCounter = () => {
   movesCount += 1;
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
+
 //Pick random objects from the images array
 const generateRandom = (size = 4) => {
   //temporary array
@@ -62,13 +65,16 @@ const generateRandom = (size = 4) => {
   size = (size * size) / 2;
   //Random object selection
   for (let i = 0; i < size; i++) {
+    //Generating random images
     const randomIndex = Math.floor(Math.random() * tempArray.length);
+    //console.log(randomIndex)
     cardValues.push(tempArray[randomIndex]);
     //once selected remove the object from temp array
     tempArray.splice(randomIndex, 1);
   }
   return cardValues;
 };
+
 const matrixGenerator = (cardValues, size = 4) => {
   gameContainer.innerHTML = "";
   cardValues = [...cardValues, ...cardValues];

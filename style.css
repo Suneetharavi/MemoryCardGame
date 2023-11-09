@@ -1,26 +1,23 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
-  }
-  body {
+body {
     background-color: #caf431;
   }
+
+  /* main Container */
   .wrapper {
     box-sizing: content-box;
-    width: 26.87em;
+    width: 500px;
     /* height: 80%; */
     padding: 2.5em 3em;
     background-color: #f21515;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 50%;
+    left: 50%;  /* To make it in middle */
     top: 50%;
     border-radius: 0.6em;
-    box-shadow: 0 0.9em 2.8em rgba(41, 17, 219, 0.2);
+    box-shadow: 0 0.9em 2.8em rgba(198, 242, 4, 0.2);
   }
+
+  /* images container */
   .game-container {
     position: relative;
     width: 100%;
@@ -28,13 +25,16 @@
     display: grid;
     gap: 0.6em;
   }
+  /* moves,count player display */
   .stats-container {
     text-align: right;
     margin-bottom: 1.2em;
   }
+  /* font settings for moves,count */
   .stats-container span {
     font-weight: 600;
   }
+  
   .card-container {
     position: relative;
     width: 6.25em;
