@@ -56,12 +56,13 @@ const timeGenerator = () => {
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
   //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
-  if((minutesValue) === 1){
+  if(((secondsValue)) === 59){
     alert('Time is Up');
     // setTimeout(stopGame,1000);
     checkGameOver(); // game is over if either player gets 28 points
 
     stopGame();
+    // return;
   }
   
 };
@@ -140,7 +141,7 @@ const matrixGenerator = (cardValues, size = 4) => {
           secondCard = card;
           let secondCardValue = card.getAttribute("data-card-value");
 
-          setTimeout(player2text.style.display = "block" , 1000);
+        //   setTimeout(player1text.style.display = "block" , 1000);
 
           if (firstCardValue == secondCardValue) {
             //if both cards match add matched class so these cards would beignored next time
@@ -180,14 +181,16 @@ const matrixGenerator = (cardValues, size = 4) => {
               tempSecond.classList.remove("flipped");
             }, 900);
 
-            setTimeout(player2text.style.display = "block",1000);
+            // setTimeout(player2text.style.display = "block",1000);
 
             if (p1Turn){
-                overlay.style.display="block"
+                player1text.style.display="block"
+                player2text.style.display = "none"
                 p1Turn = false;
             }
             else if (!p1Turn){
-                overlay1.style.display="block"
+                player2text.style.display="block"
+                player1text.style.display = "none"
                 p1Turn = true;
             }
           }
@@ -218,7 +221,7 @@ stopButton.addEventListener(
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
-    clearInterval(100);
+    clearInterval(1000);
   })
 );
 //Initialize values and func calls
@@ -233,13 +236,13 @@ const initializer = () => {
 
 function checkGameOver(){ // game is over if either player gets 28 points
     if (score1 > score2){
-       alert("CONGRATULATIONS PLAYER ONE!");
-    //    stopGame();
+       alert("CONGRATULATIONS PLAYER ONE! You Won");
+       stopGame();
        location.reload();
     }
     else if (score2 > score1){
-       alert("CONGRATULATIONS PLAYER TWO!");
-    //    stopGame();
+       alert("CONGRATULATIONS PLAYER TWO! You Won");
+       stopGame(); 
        location.reload();
     }
     else if(score1 === score2)
@@ -252,6 +255,7 @@ function checkGameOver(){ // game is over if either player gets 28 points
 //   }
   
 //   function off() {
+
 //     document.getElementById("overlay").style.display = "none";
 //   }
 

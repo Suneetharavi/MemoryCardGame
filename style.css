@@ -70,6 +70,8 @@ body {
     width: 6.25em;
     height: 6.25em;
     cursor: pointer;
+    box-shadow: 0 3px 10px black;
+    border-radius: 7px;
   }
   .card-before,
   .card-after {
