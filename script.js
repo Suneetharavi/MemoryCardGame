@@ -26,17 +26,17 @@ let secondCard = false;
 //Images array
 
 const images = [
-    {name : 'cat' , image: "cat.jpg"},
-    {name : 'tom' , image: "tom.jpg"},
-    {name : 'map' , image: "map.jpg"},
-    {name : 'rose' , image: "rose.jpg"},
-    {name : 'sun' , image: "sun.jpg"},
-    {name : 'dog' , image: "dog.jpg"},
-    {name : 'christmas' , image: "chrismas.jpg"},
-    {name : 'perscholas' , image: "perscholas.jpg"},
-    {name : 'rainbow' , image: "rainbow.jpg"},
-    {name : 'nature' , image: "rainbows.jpg"},
-    {name : 'peacock' , image: "peacock.jpg"}
+    {name : 'cat' , image: "images/cat.jpg"},
+    {name : 'tom' , image: "images/tom.jpg"},
+    {name : 'map' , image: "images/map.jpg"},
+    {name : 'rose' , image: "images/rose.jpg"},
+    {name : 'sun' , image: "images/sun.jpg"},
+    {name : 'dog' , image: "images/dog.jpg"},
+    {name : 'christmas' , image: "images/chrismas.jpg"},
+    {name : 'perscholas' , image: "images/perscholas.jpg"},
+    {name : 'rainbow' , image: "images/rainbow.jpg"},
+    {name : 'nature' , image: "images/rainbows.jpg"},
+    {name : 'peacock' , image: "images/peacock.jpg"}
 ];
 //console.log(images);
 let seconds = 0,
