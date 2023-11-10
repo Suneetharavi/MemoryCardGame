@@ -42,7 +42,7 @@ const images = [
     {name : 'nature' , image: "images/rainbows.jpg"},
     {name : 'peacock' , image: "images/peacock.jpg"},
     {name : 'kid1' , image: "images/kid1img.jpg"},
-    {name : 'kid2' , image: "images/kid1img.jpg"}
+    {name : 'kid2' , image: "images/kid2img.jpg"}
 ];
 //console.log(images);
 let seconds = 0,
@@ -231,8 +231,8 @@ stopButton.addEventListener(
   "click",
   (stopGame = () => {
 
-    if(confirm('Are You sure you want to restart the Game?')){
-      alert("Click  on StartGame to start again..!")
+    if(confirm('Do you want to restart the Game?')){
+      alert("Click  on StartGame to restart..!")
       controls.classList.remove("hide");
       stopButton.classList.add("hide");
       startButton.classList.remove("hide");
