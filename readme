@@ -24,7 +24,7 @@ create lists for displaying images in box and display using flex
 create 2 views front view and back view
 compare the images clicked
 if clicked 2 images are same . block that 2 display images.
-if all the images are blocked within the given time limit (120 sec)..you win the Game.
+if all the images are blocked within the given time limit (59 sec)..you win the Game.
 else
 you loose the game
 
@@ -44,7 +44,10 @@ The player whose score is high will be the winner.
 
 Exit button - To exit the game completely.
 
-restart button - To restart the game 
+restart button - To restart the game .
+    It wiil ask for a confirmation box. 
+    if it is yes. players will restart the game.
+     else its no- players can continue the game.
 
 Players1 and player2 scores will be displayed on either end of the left and right screen
 

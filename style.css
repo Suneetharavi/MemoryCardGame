@@ -64,6 +64,11 @@ body {
     text-align: right;
     margin-bottom: 1.2em;
   }
+
+  #warning{
+    text-align: left;;
+  }
+
   /* font settings for moves,count */
   .stats-container span {
     font-weight: 600;
