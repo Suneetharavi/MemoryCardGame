@@ -40,7 +40,9 @@ const images = [
     {name : 'perscholas' , image: "images/perscholas.jpg"},
     {name : 'rainbow' , image: "images/rainbow.jpg"},
     {name : 'nature' , image: "images/rainbows.jpg"},
-    {name : 'peacock' , image: "images/peacock.jpg"}
+    {name : 'peacock' , image: "images/peacock.jpg"},
+    {name : 'kid1' , image: "images/kid1img.jpg"},
+    {name : 'kid2' , image: "images/kid1img.jpg"}
 ];
 //console.log(images);
 let seconds = 0,
