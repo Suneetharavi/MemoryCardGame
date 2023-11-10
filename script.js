@@ -153,8 +153,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             //winCount increment as user found a correct match
             winCount += 1;
             //check if winCount ==half of cardValues
-
-            
+  
             if (p1Turn) {
                 score1 +=2;
                 displayScore1.textContent = score1.toString();
@@ -230,12 +229,18 @@ startButton.addEventListener("click", () => {
 stopButton.addEventListener(
   "click",
   (stopGame = () => {
+
+    if(confirm('Are You sure you want to restart the Game?')){
+      alert("Click  on StartGame to start again..!")
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
     displayScore2.textContent ="";
     displayScore1.textContent ="";
     clearInterval(interval);
+  }else{
+    return;
+  }
   })
 );
 //Initialize values and func calls
