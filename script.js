@@ -3,6 +3,7 @@ const moves = document.getElementById("moves-count");
 const player = document.getElementById("player");
 const timeValue = document.getElementById("time");
 const startButton = document.getElementById("start");
+const exitButton = document.getElementById("exitbutton");
 const stopButton = document.getElementById("stop");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
@@ -57,14 +58,10 @@ const timeGenerator = () => {
   //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
   if(((secondsValue)) === 59){
-    alert('Time is Up');
-    // setTimeout(stopGame,1000);
-    checkGameOver(); // game is over if either player gets 28 points
-
+    alert('Time is Up'); 
+    checkGameOver(); // To check the scores and display winner.
     stopGame();
-    // return;
-  }
-  
+  } 
 };
 
 //For calculating moves
@@ -92,7 +89,7 @@ const generateRandom = (size = 4) => {
   }
   return cardValues;
 };
-
+//Display the images 
 const matrixGenerator = (cardValues, size = 4) => {
     //clearing the innerHTML to display fresh
   gameContainer.innerHTML = "";
@@ -192,18 +189,16 @@ const matrixGenerator = (cardValues, size = 4) => {
               tempSecond.classList.remove("flipped");
             }, 900);
 
-            // setTimeout(player2text.style.display = "block",1000);
-
-            if (p1Turn){
-                player1text.style.display="block"
-                player2text.style.display = "none"
-                p1Turn = false;
-            }
-            else if (!p1Turn){
-                player2text.style.display="block"
-                player1text.style.display = "none"
-                p1Turn = true;
-            }
+              if (p1Turn){
+                  player1text.style.display="block"
+                  player2text.style.display = "none"
+                  p1Turn = false;
+              }
+              else if (!p1Turn){
+                  player2text.style.display="block"
+                  player1text.style.display = "none"
+                  p1Turn = true;
+              }
           }
         }
       }
@@ -212,18 +207,18 @@ const matrixGenerator = (cardValues, size = 4) => {
 };
 //Start game
 startButton.addEventListener("click", () => {
-  movesCount = 0;
-  seconds = 0;
-  minutes = 0;
-  //controls and buttons visibility (hide is the class name of stop button in wrapper)
-  controls.classList.add("hide");
-  stopButton.classList.remove("hide");
-  startButton.classList.add("hide");
-  //Start timer
-  interval = setInterval(timeGenerator, 1000);
-  //initial moves
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
-  initializer();
+    movesCount = 0;
+    seconds = 0;
+    minutes = 0;
+    //controls and buttons visibility (hide is the class name of stop button in wrapper)
+    controls.classList.add("hide");
+    stopButton.classList.remove("hide");
+    startButton.classList.add("hide");
+    //Start timer
+    interval = setInterval(timeGenerator, 1000);
+    //initial moves
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    initializer();
 });
 //Restart game
 stopButton.addEventListener(
@@ -232,28 +227,29 @@ stopButton.addEventListener(
 
     if(confirm('Are You sure you want to restart the Game?')){
       alert("Click  on StartGame to start again..!")
-    controls.classList.remove("hide");
-    stopButton.classList.add("hide");
-    startButton.classList.remove("hide");
-    displayScore2.textContent ="";
-    displayScore1.textContent ="";
-    clearInterval(interval);
-  }else{
-    return;
-  }
+      controls.classList.remove("hide");
+      stopButton.classList.add("hide");
+      startButton.classList.remove("hide");
+      displayScore2.textContent ="";
+      displayScore1.textContent ="";
+      clearInterval(interval);
+    }else{
+      return;
+    }
   })
 );
+
 //Initialize values and func calls
 const initializer = () => {
-//Clearing the score for next game
-  result.innerText = "";
-  winCount = 0;
-  let cardValues = generateRandom();
-  console.log(cardValues);
-  matrixGenerator(cardValues);
+  //Clearing the score for next game
+    result.innerText = "";
+    winCount = 0;
+    let cardValues = generateRandom();
+    console.log(cardValues);
+    matrixGenerator(cardValues);
 };
 
-function checkGameOver(){ // game is over if either player gets 28 points
+function checkGameOver(){ 
     if (score1 > score2){
        alert("CONGRATULATIONS PLAYER ONE! You Won");
        stopGame();
@@ -268,16 +264,6 @@ function checkGameOver(){ // game is over if either player gets 28 points
     alert("Draw match")
     location.reload();
  }
-
-//  function on(player1) {
-//     document.getElementById("overlay").style.display = "block";
-//   }
-  
-//   function off() {
-
-//     document.getElementById("overlay").style.display = "none";
-//   }
-
 
 
 
