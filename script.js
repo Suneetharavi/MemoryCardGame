@@ -172,7 +172,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             // <h4>Moves: ${movesCount}</h4>`;
                setTimeout(stopGame,2000);
            }
-
+              //Display the player id whoever is playing
             if (p1Turn){
               player1text.style.display="block"
               player2text.style.display = "none"
