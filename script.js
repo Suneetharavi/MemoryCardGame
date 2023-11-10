@@ -144,6 +144,7 @@ const matrixGenerator = (cardValues, size = 4) => {
         //   setTimeout(player1text.style.display = "block" , 1000);
 
           if (firstCardValue == secondCardValue) {
+
             //if both cards match add matched class so these cards would beignored next time
             firstCard.classList.add("matched");
             secondCard.classList.add("matched");
@@ -169,6 +170,17 @@ const matrixGenerator = (cardValues, size = 4) => {
             // <h4>Moves: ${movesCount}</h4>`;
                setTimeout(stopGame,2000);
            }
+
+            if (p1Turn){
+              player1text.style.display="block"
+              player2text.style.display = "none"
+              p1Turn = false;
+            }
+            else if (!p1Turn){
+                player2text.style.display="block"
+                player1text.style.display = "none"
+                p1Turn = true;
+            }
            
           } else {
             //if the cards dont match
@@ -221,7 +233,9 @@ stopButton.addEventListener(
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
-    clearInterval(1000);
+    displayScore2.textContent ="";
+    displayScore1.textContent ="";
+    clearInterval(interval);
   })
 );
 //Initialize values and func calls

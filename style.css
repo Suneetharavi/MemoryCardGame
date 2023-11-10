@@ -48,6 +48,10 @@ body {
     box-shadow: 0 0.9em 2.8em rgba(198, 242, 4, 0.2);
   }
 
+  #time{
+    left:0;
+  }
+
   /* images container */
   .game-container {
     position: relative;
