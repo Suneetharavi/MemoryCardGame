@@ -6,7 +6,10 @@ const startButton = document.getElementById("start");
 const stopButton = document.getElementById("stop");
 const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
-const playing = document.getElementById("overlay")
+
+const player1text = document.getElementById("player1text");
+const player2text = document.getElementById("player2text");
+const overlay = document.getElementById('overlay');
 
 const displayScore1 = document.querySelector('#score1');
 const displayScore2 = document.querySelector('#score2');
@@ -53,7 +56,7 @@ const timeGenerator = () => {
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
   //display time using innerHTML
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
-  if((minutesValue) === 2){
+  if((minutesValue) === 1){
     alert('Time is Up');
     // setTimeout(stopGame,1000);
     checkGameOver(); // game is over if either player gets 28 points
@@ -136,6 +139,9 @@ const matrixGenerator = (cardValues, size = 4) => {
           //secondCard and value
           secondCard = card;
           let secondCardValue = card.getAttribute("data-card-value");
+
+          setTimeout(player2text.style.display = "block" , 1000);
+
           if (firstCardValue == secondCardValue) {
             //if both cards match add matched class so these cards would beignored next time
             firstCard.classList.add("matched");
@@ -145,6 +151,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             //winCount increment as user found a correct match
             winCount += 1;
             //check if winCount ==half of cardValues
+
             
             if (p1Turn) {
                 score1 +=2;
@@ -173,10 +180,14 @@ const matrixGenerator = (cardValues, size = 4) => {
               tempSecond.classList.remove("flipped");
             }, 900);
 
+            setTimeout(player2text.style.display = "block",1000);
+
             if (p1Turn){
+                overlay.style.display="block"
                 p1Turn = false;
             }
             else if (!p1Turn){
+                overlay1.style.display="block"
                 p1Turn = true;
             }
           }
