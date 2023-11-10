@@ -23,6 +23,10 @@ let interval;
 let firstCard = false;
 let secondCard = false;
 
+//for sounds
+
+let playsound;
+
 //Images array
 
 const images = [
