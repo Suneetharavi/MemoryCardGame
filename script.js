@@ -260,13 +260,11 @@ const initializer = () => {
 
 function checkGameOver(){ 
     if (score1 > score2){
-       alert("CONGRATULATIONS PLAYER ONE! You Won");
-       stopGame();
+       alert("CONGRATULATIONS PLAYER ONE! You Won");    
        location.reload();
     }
     else if (score2 > score1){
        alert("CONGRATULATIONS PLAYER TWO! You Won");
-       stopGame(); 
        location.reload();
     }
     else if(score1 === score2)
