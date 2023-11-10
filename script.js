@@ -42,7 +42,10 @@ const images = [
     {name : 'nature' , image: "images/rainbows.jpg"},
     {name : 'peacock' , image: "images/peacock.jpg"},
     {name : 'kid1' , image: "images/kid1img.jpg"},
-    {name : 'kid2' , image: "images/kid2img.jpg"}
+    {name : 'kid2' , image: "images/kid2img.jpg"},
+    {name : 'alien' , image: "images/alienImg.jpg"},
+    {name : 'alien' , image: "images/Go Go plastic.jpg"},
+    {name : 'alien' , image: "images/USSAimg.jpg"}
 ];
 //console.log(images);
 let seconds = 0,
