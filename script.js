@@ -24,9 +24,19 @@ let firstCard = false;
 let secondCard = false;
 
 //for sounds
+let startSound = new Audio("sounds/simple.mp3");
+function sound(){
 
-let playsound;
 
+startSound.play();
+//   // let successSound = new sound("sounds\success-sound.mp3")
+//   // successSound.play();
+//   let endgameSound = new sound("sounds\endgamesound.mp3")
+//   endgameSound.play()
+
+ }
+
+ 
 //Images array
 
 const images = [
@@ -216,6 +226,7 @@ const matrixGenerator = (cardValues, size = 4) => {
 };
 //Start game
 startButton.addEventListener("click", () => {
+  
     movesCount = 0;
     seconds = 0;
     minutes = 0;
@@ -224,7 +235,7 @@ startButton.addEventListener("click", () => {
     stopButton.classList.remove("hide");
     startButton.classList.add("hide");
     //Start timer
-    interval = setInterval(timeGenerator, 1000);
+    interval = setInterval(timeGenerator, 2100);
     //initial moves
     moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
     initializer();
@@ -241,6 +252,9 @@ stopButton.addEventListener(
       startButton.classList.remove("hide");
       displayScore2.textContent ="";
       displayScore1.textContent ="";
+      player1text.textContent = "";
+      player2text.textContent = "";
+
       clearInterval(interval);
     }else{
       return;
@@ -260,14 +274,17 @@ const initializer = () => {
 
 function checkGameOver(){ 
     if (score1 > score2){
+      
        alert("CONGRATULATIONS PLAYER ONE! You Won");    
        location.reload();
     }
     else if (score2 > score1){
+      
        alert("CONGRATULATIONS PLAYER TWO! You Won");
        location.reload();
     }
     else if(score1 === score2)
+
     alert("Draw match")
     location.reload();
  }

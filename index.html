@@ -13,13 +13,11 @@
             Exit Game
         </button>
         <div id="overlay">
-            <div id="player1text">Player1 playing</div>
-          </div>
-          
-          <div id="player2overlay"> 
-            <div id="player2text">Player2 playing</div>
-          </div>
-          
+          <div id="player1text">Player1 playing</div>
+        </div>
+        <div id="overlay">
+          <div id="player2text">Player2 playing</div>
+        </div>      
     </div>
 
     <div class="wrapper">
@@ -28,6 +26,7 @@
             <div id="moves-count"></div>
             <div id="time"></div>
             <div id = "warning">You Should Finish the Game in 59 Seconds</div>
+            
         </div>
 
         <div class="game-container"></div>
@@ -38,7 +37,7 @@
 
     <div class="controls-container">
       <p id="result"></p>
-      <button id="start">Start Game</button>
+      <button id="start" onclick="sound()">Start Game</button>
     </div>
 
     <div class="player1board"> <!--Player 1 scoreboard-->
@@ -53,10 +52,10 @@
         <div class="Player2" data-id="P2">
             <h2>Player 2</h2>
             <h2>Score: <span id="score2"></span></h2>
-        </div>
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+          </div>
+    </div>
+  <script src = "script.js" defer></script>
+</body>
 </html>
 
 

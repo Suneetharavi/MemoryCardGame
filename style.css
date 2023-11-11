@@ -1,5 +1,6 @@
 body {
     background-color: #caf431;
+    /* background-image: url("/images/gamebg1.webp"); */
   }
 
   .image{
@@ -209,17 +210,19 @@ body {
   #player1text {
     position: absolute;
     display: none;
-    background-color: rgb(134, 134, 244);
+    background-color: rgb(244, 134, 220);
     cursor: pointer;
+    color: #000000;
     
   }
 
   #player2text {
     display:none;
-    background-color: rgb(244, 134, 237);
+    background-color: rgb(134, 150, 244);
     cursor: pointer;
     position: absolute;
     left: 600px;
+    color: #000000;
   
   }
   
