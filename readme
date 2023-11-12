@@ -35,17 +35,17 @@ For every match the player make ,score increases by 1.
 The player whose score is high will win the game.
 
 The players has to finish the game within 2 minutes. 
-If the game is not finished within 2 minutes. 
+If the game is not finished within 59 minutes. 
 you will get an alert box . saying "Time Up"
 
-If players finish the game in 2 minutes..
+If players finish the game in 59 minutes..
 
 The player whose score is high will be the winner.
 
 Exit button - To exit the game completely.
 
 restart button - To restart the game .
-    It wiil ask for a confirmation box. 
+    It will ask for a confirmation box. 
     if it is yes. players will restart the game.
      else its no- players can continue the game.
 
