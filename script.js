@@ -48,12 +48,14 @@ const images = [
     {name : 'rainbow' , image: "images/rainbow.jpg"},
     {name : 'nature' , image: "images/rainbows.jpg"},
     {name : 'peacock' , image: "images/peacock.jpg"},
+    {name : 'libertys' , image: "images/liberty.jpeg"},
     {name : 'kid1' , image: "images/kid1img.jpg"},
     {name : 'kid2' , image: "images/kid2img.jpg"},
     {name : 'alien' , image: "images/alienImg.jpg"},
     {name : 'gogo' , image: "images/Go Go plastic.jpg"},
     {name : 'USSA' , image: "images/USSAimg.jpg"},
     {name : 'tiger' , image: "images/babytiger.jpg"}
+  
 ];
 //console.log(images);
 let seconds = 0,
