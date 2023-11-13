@@ -1,4 +1,4 @@
-               Memory Card Game
+##               Memory Card Game
 ________________________________________________
 
 Memory card game is like a simple memory test game for your Brain.
@@ -9,14 +9,14 @@ To win this game you should find all the matching pairs by clicking on the cards
 There is a time limit of 59 seconds, and you have to find the pair of cards in this given time.
 
 
-pseudocode
+## pseudocode
 __________
 
-Create a new Folder for your Game named MemorycardGame
-In this folder create following 3 files:                                                               
-Create a HTML File named index.html
-Create a CSS File named style.scc
-Create a JS File index.js and link it to index.html (Using script tag)
+1. Create a new Folder for your Game named MemorycardGame
+2. In this folder create following 3 files:                                                               
+3. Create a HTML File named index.html
+4. Create a CSS File named style.scc
+5. Create a JS File index.js and link it to index.html (Using script tag)
 
 In HTMl 
 create div (container) to hold the cards
