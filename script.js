@@ -226,7 +226,7 @@ const matrixGenerator = (cardValues, size = 4) => {
 };
 
 exitButton.addEventListener("click", (exitGame = () =>{
-    if (confirm("Press 'OK' to leave the Eternity Test, or 'Cancel' if you want to stay: "))
+    if (confirm("Press 'OK' to leave the Game, or 'Cancel' if you want to stay: "))
     {
         window.location="https://perscholas.org/";
     }
