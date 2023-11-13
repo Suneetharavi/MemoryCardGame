@@ -160,7 +160,7 @@ body {
     color: #ef1414;
 }
 
-.exitbutton{
+#exitbutton{
     text-align: center;
     padding: 16px;
     font-size: 18px;

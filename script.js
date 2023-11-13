@@ -26,16 +26,13 @@ let secondCard = false;
 //for sounds
 let startSound = new Audio("sounds/simple.mp3");
 function sound(){
-
-
-startSound.play();
-//   // let successSound = new sound("sounds\success-sound.mp3")
-//   // successSound.play();
-//   let endgameSound = new sound("sounds\endgamesound.mp3")
-//   endgameSound.play()
-
+  startSound.play();
  }
 
+ let exitmusic = new Audio("sounds/big-impact.mp3")
+ function exitsound(){
+    exitmusic.play();
+ }
  
 //Images array
 
@@ -224,6 +221,21 @@ const matrixGenerator = (cardValues, size = 4) => {
     });
   });
 };
+
+exitButton.addEventListener("click", (exitGame = () =>{
+    if (confirm("Press 'OK' to leave the Eternity Test, or 'Cancel' if you want to stay: "))
+    {
+        window.location="https://perscholas.org/";
+    }
+    else
+    {
+        // window.location.reload();
+         return;
+    }
+  })
+);
+  // onclick="window.open('', '_self', ''); window.close();"
+
 //Start game
 startButton.addEventListener("click", () => {
   
